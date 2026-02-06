@@ -1,0 +1,20 @@
+@0xa6938667b2bb5800
+
+enum States {
+  # Default / 30K
+  Start @0;
+  PreLaunch @1;
+  Boost @2;
+  Coast @3;
+  DrogueDescent @4;
+  MainDescent @5;
+  Recovery @6;
+  Abort @7;
+  # 2-Stage Specific
+  Stage1Boost @8;
+  Separation @9;
+  Stage2Boost @10;
+  Airbrakes @11;
+  # Canards Specific
+  Canards @12;
+}
