@@ -1,12 +1,10 @@
 @0x9a7f474374b97e20
 
 struct Shared {
-  Callsign @0: Text;
+  TimeFromBoot @0: UInt32;
+  LoopCount @1: UInt32;
 
-  TimeFromBoot @1: UInt32;
-  LoopCount @2: UInt32;
+  SDFileNo @2: Int8;
 
-  SDFileNo @3: Int8;
-
-  BatteryVoltage @4: Float32;
+  BatteryVoltage @3: Float32;
 }
