@@ -1,0 +1,29 @@
+// Sensors.fbs
+// Converted from Sensors.capnp
+
+namespace hprc;
+
+struct Sensors {
+  acc_1_x: float;
+  acc_1_y: float;
+  acc_1_z: float;
+
+  gyro_1_x: float;
+  gyro_1_y: float;
+  gyro_1_z: float;
+
+  acc_2_x: float;
+  acc_2_y: float;
+  acc_2_z: float;
+
+  gyro_2_x: float;
+  gyro_2_y: float;
+  gyro_2_z: float;
+
+  mag_x: float;
+  mag_y: float;
+  mag_z: float;
+
+  pressure: float;
+  temperature: float;
+}

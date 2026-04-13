@@ -1,0 +1,24 @@
+include "States.fbs";
+include "Shared.fbs";
+include "Sensors.fbs";
+include "EKF.fbs";
+include "Actuator.fbs";
+
+namespace hprc;
+
+table RocketCanardsTelemetryPacket {
+  shared: Shared;
+  state: States = Start;
+  sensor_values: Sensors;
+  ekf_values: EKF;
+
+  // Covariance diagonal elements (variable-length)
+  covariance_diagonal: [float];
+
+  canard1: ActuatorFeedback;
+  canard2: ActuatorFeedback;
+  canard3: ActuatorFeedback;
+  canard4: ActuatorFeedback;
+}
+
+root_type RocketCanardsTelemetryPacket;

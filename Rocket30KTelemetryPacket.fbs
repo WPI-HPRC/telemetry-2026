@@ -1,0 +1,17 @@
+include "States.fbs";
+include "Shared.fbs";
+include "Sensors.fbs";
+include "EKF.fbs";
+include "GPS.fbs";
+
+namespace hprc;
+
+table Rocket30KTelemetryPacket {
+  shared: Shared;
+  state: States = Start;
+  sensor_values: Sensors;
+  gps_values: GPS;
+  ekf_values: EKF;
+}
+
+root_type Rocket30KTelemetryPacket;

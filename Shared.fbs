@@ -1,0 +1,11 @@
+// Shared.fbs
+// Converted from Shared.capnp
+
+namespace hprc;
+
+struct Shared {
+  time_from_boot: uint32;
+  loop_count: uint32;
+  sd_file_no: int8;
+  battery_voltage: float;
+}

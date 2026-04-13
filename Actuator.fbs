@@ -1,0 +1,10 @@
+namespace hprc;
+
+struct ActuatorFeedback {
+  commanded: float;
+  actual: float;
+}
+
+struct Actuator {
+  commanded: float;
+}

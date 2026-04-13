@@ -1,0 +1,17 @@
+include "States.fbs";
+include "Shared.fbs";
+include "Sensors.fbs";
+include "EKF.fbs";
+include "Actuator.fbs";
+
+namespace hprc;
+
+table Rocket2StageTelemetryPacket {
+  shared: Shared;
+  state: States = Start;
+  sensor_values: Sensors;
+  ekf_values: EKF;
+  airbrakes: ActuatorFeedback;
+}
+
+root_type Rocket2StageTelemetryPacket;

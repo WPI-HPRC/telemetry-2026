@@ -1,0 +1,28 @@
+include "States.fbs";
+include "Shared.fbs";
+include "Sensors.fbs";
+include "EKF.fbs";
+include "Actuator.fbs";
+
+namespace hprc;
+
+table PayloadTelemetryPacket {
+  shared: Shared;
+  state: States = Start;
+  sensor_values: Sensors;
+  ekf_values: EKF;
+
+  self_righting1_servo: Actuator;
+  self_righting2_servo: Actuator;
+  latch_servo: Actuator;
+  antenna_servo: Actuator;
+
+  motor_left: Actuator;
+  motor_right: Actuator;
+  motor_left_temp: ubyte;
+  motor_right_temp: ubyte;
+  motor_left_current: uint16;
+  motor_right_current: uint16;
+}
+
+root_type PayloadTelemetryPacket;

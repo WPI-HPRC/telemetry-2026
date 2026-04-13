@@ -1,0 +1,11 @@
+namespace hprc;
+
+struct GPS {
+  has_lock: bool;
+  satellites: ubyte;
+  epoch_time: uint32;
+  ecef_x: double;
+  ecef_y: double;
+  ecef_z: double;
+}
+

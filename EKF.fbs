@@ -1,0 +1,20 @@
+namespace hprc;
+
+struct EKF {
+  // Quaternion components
+  w: float;
+  i: float;
+  j: float;
+  k: float;
+
+  // Position
+  pos_x: float;
+  pos_y: float;
+  pos_z: float;
+
+  // Velocity
+  vel_x: float;
+  vel_y: float;
+  vel_z: float;
+}
+

@@ -1,0 +1,23 @@
+namespace hprc;
+
+enum Command : ubyte {
+  // Common
+  ArmFlight = 0,
+  DeArmFlight = 1,
+  Reset = 2,
+  // Remote Start
+  RemoteStartOn = 3,
+  RemoteStartOff = 4,
+  // Canards Specific
+  CanardsTest = 5,
+  CanardsReset = 6,
+  CanardsDisable = 7,
+  CanardsEnable = 8,
+}
+
+table RemoteControlCommand {
+  command_number: uint16;
+  command: Command;
+}
+
+root_type RemoteControlCommand;
