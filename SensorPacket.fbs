@@ -1,0 +1,10 @@
+include "Sensors.fbs";
+
+
+namespace hprc;
+
+table SensorPacket {
+  sensor_values: Sensors;
+}
+
+root_type SensorPacket;
