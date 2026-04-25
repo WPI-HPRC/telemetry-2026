@@ -1,0 +1,21 @@
+include "PayloadTelemetryPacket.fbs";
+include "Rocket2StageTelemetryPacket.fbs";
+include "Rocket30KTelemetryPacket.fbs";
+include "RocketCanardsTelemetryPacket.fbs";
+include "RemoteControl.fbs";
+
+namespace hprc;
+
+union PacketUnion {
+    Rocket30KTelemetryPacket:Rocket30KTelemetryPacket,
+    Rocket2StageTelemetryPacket:Rocket2StageTelemetryPacket,
+    RocketCanardsTelemetryPacket:RocketCanardsTelemetryPacket,
+    PayloadTelemetryPacket:PayloadTelemetryPacket,
+    RemoteControl:RemoteControlCommand
+}
+
+table Packet {
+    packet:PacketUnion;
+}
+
+root_type Packet;

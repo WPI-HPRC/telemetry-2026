@@ -13,6 +13,8 @@ enum Command : ubyte {
   CanardsReset = 6,
   CanardsDisable = 7,
   CanardsEnable = 8,
+  StartEstimator = 9,
+  Abort = 10,
 }
 
 table RemoteControlCommand {
