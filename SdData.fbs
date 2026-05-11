@@ -1,0 +1,55 @@
+namespace hprc;
+
+struct ASM330Data {
+	accel0: float;
+	accel1: float;
+	accel2: float;
+
+	gyr0: float;
+	gyr1: float;
+	gyr2: float;
+}
+
+struct LSM6Data {
+	accel0: float;
+	accel1: float;
+	accel2: float;
+
+	gyr0: float;
+	gyr1: float;
+	gyr2: float;
+}
+
+struct LIS2MDLData {
+	mag0: float;
+	mag1: float;
+	mag2: float;
+}
+
+struct LPS22Data {
+	pressure: float;
+	temp: float;
+}
+
+struct LIV3FData {
+	lat: float;
+	lon: float;
+	alt: float;
+	satellites: ubyte;
+	epochTime: uint32;
+}
+
+union SensorData {
+	ASM330: ASM330Data,
+	LSM6: LSM6Data,
+	LIS2MDL: LIS2MDLData,
+	LPS22: LPS22Data,
+	LIV3F: LIV3FData,
+}
+
+table SDPacket {
+	timestamp: uint32;
+	data: SensorData;
+}
+
+root_type SDPacket;

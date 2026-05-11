@@ -7,5 +7,8 @@ struct GPS {
   ecef_x: double;
   ecef_y: double;
   ecef_z: double;
+  latitude: double;
+  longitude: double;
+  altitude: double;
 }
 
