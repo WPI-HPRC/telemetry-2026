@@ -3,27 +3,56 @@
 
 namespace hprc;
 
-struct Sensors {
-  acc_1_x: float;
-  acc_1_y: float;
-  acc_1_z: float;
 
-  gyro_1_x: float;
-  gyro_1_y: float;
-  gyro_1_z: float;
+struct ASM330Data_Accel {
+	accel0: float;
+	accel1: float;
+	accel2: float;
+}
 
-  acc_2_x: float;
-  acc_2_y: float;
-  acc_2_z: float;
+struct ASM330Data_Gyro {
+	gyr0: float;
+	gyr1: float;
+	gyr2: float;
+}
 
-  gyro_2_x: float;
-  gyro_2_y: float;
-  gyro_2_z: float;
+struct LSM6Data_Accel {
+	accel0: float;
+	accel1: float;
+	accel2: float;
+}
 
-  mag_x: float;
-  mag_y: float;
-  mag_z: float;
+struct LSM6Data_Gyro {
+	gyr0: float;
+	gyr1: float;
+	gyr2: float;
+}
 
-  pressure: float;
-  temperature: float;
+struct LIS2MDLData {
+	mag0: float;
+	mag1: float;
+	mag2: float;
+}
+
+struct LPS22Data {
+	pressure: float;
+	temp: float;
+}
+
+struct LIV3FData {
+	lat: float;
+	lon: float;
+	alt: float;
+	satellites: ubyte;
+	epochTime: uint32;
+}
+
+table Sensors {
+  ASM330_accel: ASM330Data_Accel;
+  ASM330_gryo: ASM330Data_Gyro;
+  LSM6_accel: LSM6Data_Accel;
+  LSM6_gyro: LSM6Data_Gyro;
+  LIS2MDL: LIS2MDLData;
+  LPS22: LPS22Data;
+  LIV3F: LIV3FData;  
 }
