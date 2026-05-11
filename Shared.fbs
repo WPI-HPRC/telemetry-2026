@@ -8,4 +8,7 @@ struct Shared {
   loop_count: uint32;
   sd_file_no: int8;
   battery_voltage: float;
+  mosfet_current: float;
+  mosfet_state: bool;
+  last_command_received: uint16;
 }

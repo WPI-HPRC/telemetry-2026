@@ -12,6 +12,7 @@ table Rocket30KTelemetryPacket {
   sensor_values: Sensors;
   gps_values: GPS;
   ekf_values: EKF;
+  live_video_status: bool;
 }
 
 root_type Rocket30KTelemetryPacket;
