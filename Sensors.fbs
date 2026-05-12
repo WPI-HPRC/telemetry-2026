@@ -3,26 +3,28 @@
 
 namespace hprc;
 
+enum SensorBitfield : ubyte {
+	None = 0x00,
+	ASM330 = 0x01,
+	LSM6 = 0x02,
+	LIS2MDL = 0x4,
+	LPS22 = 0x8,
+	LIV3F = 0x10,
+}
 
-struct ASM330Data_Accel {
+struct ASM330Data {
 	accel0: float;
 	accel1: float;
 	accel2: float;
-}
-
-struct ASM330Data_Gyro {
 	gyr0: float;
 	gyr1: float;
 	gyr2: float;
 }
 
-struct LSM6Data_Accel {
+struct LSM6Data {
 	accel0: float;
 	accel1: float;
 	accel2: float;
-}
-
-struct LSM6Data_Gyro {
 	gyr0: float;
 	gyr1: float;
 	gyr2: float;
@@ -48,11 +50,10 @@ struct LIV3FData {
 }
 
 table Sensors {
-  ASM330_accel: ASM330Data_Accel;
-  ASM330_gryo: ASM330Data_Gyro;
-  LSM6_accel: LSM6Data_Accel;
-  LSM6_gyro: LSM6Data_Gyro;
-  LIS2MDL: LIS2MDLData;
-  LPS22: LPS22Data;
-  LIV3F: LIV3FData;  
+	bitfield: SensorBitfield;
+	ASM330: ASM330Data;
+	LSM6: LSM6Data;
+	LIS2MDL: LIS2MDLData;
+	LPS22: LPS22Data;
+	LIV3F: LIV3FData;  
 }
