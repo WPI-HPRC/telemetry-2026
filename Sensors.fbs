@@ -37,13 +37,13 @@ struct LIV3FData {
 	lon: float;
 	alt: float;
 	satellites: ubyte;
-	epochTime: uint32;
+	epoch_time: uint32;
 }
 
 table Sensors {
-	ASM330: ASM330Data;
-	LSM6: LSM6Data;
-	LIS2MDL: LIS2MDLData;
-	LPS22: LPS22Data;
-	LIV3F: LIV3FData;  
+	asm330: ASM330Data;
+	lsm6: LSM6Data;
+	lis2mdl: LIS2MDLData;
+	lps22: LPS22Data;
+	liv3f: LIV3FData;  
 }
