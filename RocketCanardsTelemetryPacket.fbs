@@ -2,7 +2,6 @@ include "States.fbs";
 include "Shared.fbs";
 include "Sensors.fbs";
 include "EKF.fbs";
-include "GPS.fbs";
 include "Actuator.fbs";
 
 namespace hprc;
@@ -11,7 +10,6 @@ table RocketCanardsTelemetryPacket {
   shared: Shared;
   state: States = Start;
   sensor_values: Sensors;
-  gps_values: GPS;
   ekf_values: EKF;
 
   // Covariance diagonal elements (variable-length)
