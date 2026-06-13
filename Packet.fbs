@@ -15,7 +15,7 @@ union PacketUnion {
     PayloadTelemetryPacket:PayloadTelemetryPacket,
     RemoteControl:RemoteControlCommand,
     CameraPacket:CameraPacket,
-    PayloadControlPacket
+    PayloadControlPacket:PayloadControlPacket
 }
 
 table Packet {
