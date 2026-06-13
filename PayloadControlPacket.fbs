@@ -1,0 +1,10 @@
+include "Packet.fbs";
+
+namespace hprc;
+
+table PayloadControlPacket {
+    throttle: float; // forward back control. -1.0 is full backward, +1.0 is full forward
+    rotation: float; // left right control. -1.0 is full left, +1.0 is full right.
+}
+
+root_type PayloadControlPacket;
