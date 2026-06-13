@@ -3,6 +3,7 @@ include "Rocket2StageTelemetryPacket.fbs";
 include "Rocket30KTelemetryPacket.fbs";
 include "RocketCanardsTelemetryPacket.fbs";
 include "RemoteControl.fbs";
+include "CameraPacket.fbs";
 
 namespace hprc;
 
@@ -11,7 +12,8 @@ union PacketUnion {
     Rocket2StageTelemetryPacket:Rocket2StageTelemetryPacket,
     RocketCanardsTelemetryPacket:RocketCanardsTelemetryPacket,
     PayloadTelemetryPacket:PayloadTelemetryPacket,
-    RemoteControl:RemoteControlCommand
+    RemoteControl:RemoteControlCommand,
+    CameraPacket:CameraPacket
 }
 
 table Packet {

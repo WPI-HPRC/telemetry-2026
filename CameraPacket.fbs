@@ -1,0 +1,13 @@
+namespace hprc;
+
+table CameraPacket {
+    fragment_num: ubyte; // defines which 20x10 piece we're sending. Indexed 0-95, Ordered left->right, top->bottom.
+
+    pixels: Pixels;
+}
+
+struct Pixels {
+    grayscale_jpg: [ubyte:200]; // 20x10 array of pixels, each represented by a single byte. Ordered left->right, top->bottom.
+}
+
+root_type CameraPacket;
