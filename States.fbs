@@ -20,4 +20,13 @@ enum States : ubyte {
   Airbrakes = 11,
   // Canards Specific
   Canards = 12,
+  // Payload Specific
+  SelfRighting = 13,
+  LatchReleasing = 14,
+  Deploying = 15,
+  Deployed = 16,
+  Connecting = 17,
+  ROV = 18,
+  Autonomous = 19,
+  Idle = 20,
 }
