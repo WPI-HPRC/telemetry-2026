@@ -8,6 +8,8 @@ namespace hprc;
 
 struct BlobCoord {
   index: byte;
+  x: byte;
+  y: byte;
   width: byte;
   height: byte;
   ellipse_a: byte;
