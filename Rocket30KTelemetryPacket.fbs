@@ -11,6 +11,8 @@ table Rocket30KTelemetryPacket {
   sensor_values: Sensors;
   ekf_values: EKF;
   live_video_status: bool;
+
+  covariance_diagonal: [float];
 }
 
 root_type Rocket30KTelemetryPacket;
