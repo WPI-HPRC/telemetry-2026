@@ -6,6 +6,16 @@ include "Actuator.fbs";
 
 namespace hprc;
 
+struct BlobCoord {
+  index: byte;
+  width: byte;
+  height: byte;
+  ellipse_a: byte;
+  ellipse_b: byte;
+  rotation: int16;
+  confidence: float;
+}
+
 table PayloadTelemetryPacket {
   shared: Shared;
   state: States = Start;
@@ -19,10 +29,15 @@ table PayloadTelemetryPacket {
 
   motor_left: Actuator;
   motor_right: Actuator;
-  motor_left_temp: ubyte;
-  motor_right_temp: ubyte;
-  motor_left_current: uint16;
-  motor_right_current: uint16;
+
+  battery_voltage: float;
+
+  blob_data: [BlobCoord];
+
+  horiz_x1: byte;
+  horiz_x2: byte;
+  horiz_y1: byte;
+  horiz_y2: byte;
 }
 
 root_type PayloadTelemetryPacket;
