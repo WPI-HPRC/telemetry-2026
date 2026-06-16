@@ -1,10 +1,12 @@
 include "Sensors.fbs";
+include "EKF.fbs";
 
 namespace hprc;
 
 table SDPacket {
 	timestamp: uint32;
 	sensors: Sensors;
+	ekf: EKF;
 }
 
 root_type SDPacket;
