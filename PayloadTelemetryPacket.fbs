@@ -32,14 +32,13 @@ table PayloadTelemetryPacket {
   motor_left: Actuator;
   motor_right: Actuator;
 
-  battery_voltage: float;
-
   blob_data: [BlobCoord];
 
   horiz_x1: byte;
   horiz_x2: byte;
   horiz_y1: byte;
   horiz_y2: byte;
+  horiz_valid: bool;
 }
 
 root_type PayloadTelemetryPacket;
