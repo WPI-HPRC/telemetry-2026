@@ -32,7 +32,7 @@ struct LPS22Data {
 	temp: float;
 }
 
-struct LIV3FData {
+struct MAX10SData {
 	lat: float;
 	lon: float;
 	alt: float;
@@ -45,5 +45,5 @@ table Sensors {
 	lsm6: LSM6Data;
 	lis2mdl: LIS2MDLData;
 	lps22: LPS22Data;
-	liv3f: LIV3FData;  
+	max10s: MAX10SData;  
 }
